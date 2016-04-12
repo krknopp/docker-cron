@@ -1,11 +1,13 @@
 FROM ubuntu:latest
 
-MAINTAINER Raphael Zimmermann <mister.norbert@gmail.com>
+MAINTAINER Kerry Knopp <kerry@codekoalas.com>
 
 # Install cron and supervisor
 RUN apt-get update
 RUN apt-get install cron -yqq
 RUN apt-get install supervisor -yqq
+RUN apt-get install git -yqq
+RUN apt-get install curl -yqq
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
@@ -18,6 +20,10 @@ RUN rm -Rf /etc/cron.hourly
 #Add crontab and logger script
 COPY crontab /etc/crontab
 COPY logger.sh /bin/logger.sh
+COPY make_symlinks.sh /opt/make_symlinks.sh
+
+# Add scripts folder
+RUN mkdir /opt/scripts
 
 # Add the run script
 ADD run.sh /opt/run.sh

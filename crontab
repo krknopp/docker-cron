@@ -1,2 +1,2 @@
-* * * * * root whoami
-* * * * * root pwd
+*/15 * * * * root git -C /opt/scripts pull
+*/15 * * * * root /opt/make_symlinks.sh
