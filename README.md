@@ -1,4 +1,5 @@
-# Docker [raphiz/ubuntu-cron](https://registry.hub.docker.com/u/raphiz/ubuntu-cron)
+# CK Cron
+based on [raphiz/ubuntu-cron](https://registry.hub.docker.com/u/raphiz/ubuntu-cron)
 
 Ubuntu latest with cron, powerd by supervisor.
 
@@ -9,3 +10,4 @@ inspect the logs with `docker logs <container>`.
 If you want that other files also appear in the stdout, you can set the environment
 variable `FILES_TO_LOG` with a semicolon separated list of files to log (eg.
 `FILES_TO_LOG=/var/log/app_info.log;/var/log/app_error.log`)
+
