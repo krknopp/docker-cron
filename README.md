@@ -1,4 +1,4 @@
-# CK Cron
+# Cron
 based on [raphiz/ubuntu-cron](https://registry.hub.docker.com/u/raphiz/ubuntu-cron)
 
 Ubuntu latest with cron, powerd by supervisor.
@@ -11,3 +11,6 @@ If you want that other files also appear in the stdout, you can set the environm
 variable `FILES_TO_LOG` with a semicolon separated list of files to log (eg.
 `FILES_TO_LOG=/var/log/app_info.log;/var/log/app_error.log`)
 
+Environment Variables
+GIT_REPO - URL of Git Repo. Use HTTP authentication, if not public
+GIT_BRANCH - Branch of GITURL to clone
